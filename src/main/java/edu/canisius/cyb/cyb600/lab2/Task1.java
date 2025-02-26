@@ -13,10 +13,12 @@ public class Task1 {
      * @return List of Characters. Should not return null.
      */
     public List<Character> listAllCharacters(String stringToList){
-        if (stringToList == null){
-            return null;
-        }
         List<Character> characterList = new ArrayList<>();
+
+        if (stringToList == null){
+            return characterList;
+        }
+
         for(int i=0; i<stringToList.toCharArray().length;i++){
             characterList.add(stringToList.toCharArray()[i]);
         }
@@ -57,9 +59,12 @@ public class Task1 {
      */
     public List<String> returnsTheSameStringTenTimes(String baseString){
         List<String> arrayList = new ArrayList<>();
+
+        if (baseString == null )
+            return arrayList;
         while (arrayList.size() < 10){
             arrayList.add(baseString);
         }
-        return new ArrayList<>();
+        return arrayList;
     }
 }
